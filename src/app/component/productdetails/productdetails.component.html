@@ -1,0 +1,26 @@
+<div class="container">
+        
+        
+        <div class="card border-primary" *ngFor="let data of model" >
+               
+
+          <div class="card-header" class="bg-primary text-white">ProductList details {{data.productId}}-{{data.product}}</div>
+          <div class="card-body">
+              <div class="row">
+                  <img src="{{data.productImage}}"/></div>
+<div class="row"><h5>Id-{{data.productId}}</h5></div>
+<div class="row"><h5>ProductName-{{data.product}}</h5></div>
+<div class="row"><h5>ProductCode-{{data.code}}</h5></div>
+<div class="row"><h5>ProductPrice-{{data.price}}</h5></div>
+<div class="row"><h5>ProductRating-{{data.rating}}</h5></div>
+                  
+          </div> 
+          <div class="container">
+
+          
+          <button type="button" class=" btn btn-primary text-white" routerLink="/Product">Back</button>
+        </div>
+          <div class="card-footer">Created by vs 2019</div>
+        </div>
+      
+    </div>

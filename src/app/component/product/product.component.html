@@ -1,0 +1,62 @@
+<div class="container">
+<div class="row">
+<div class="col-md-10">
+        <div class="card border-primary">
+                <div class="card-header bg-primary text-white ">
+                      Product List
+                </div>        
+                
+                    
+                <div class="card-body">
+<div class="container">
+<div class="row">
+    <div class ="col-md-2 form-group">
+        Filter By:
+    </div>                         <div class="col-md-4 form-group">
+                                            <input type="search" class="form-control" id="search" [(ngModel)]="searchProduct"/> 
+                                        </div>
+                                    </div>
+                                        <table class="table ">
+                                            <thead>
+                                                <tr>
+                                                    <th><button type="button" class="btn btn-primary" (click)="imgFunct()">{{isshow ? 'hide Image' :'Show Image'}}</button></th>
+                                                    <th>product</th>
+                                                    <th>code</th>
+                                                    <th>available</th>
+                                                    <th>Price</th>
+                                                    <th>5 star Rating</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr *ngFor="let data of userdata | ProductFilter :  searchProduct">
+                                                    <td ><img src="{{data.productImage}}" class="imgStyle" *ngIf="isshow" ></td>
+                                                    <td><a routerLink="/productdetails/{{data.productId}}">{{data.product}}</a></td>
+                                                    <td>{{data.code}}</td>
+                                                    <td>{{data.available}}</td>
+                                                    <td>{{data.price}}</td>
+                                                <td [title]="data.rating">
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+
+                                                </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                        </div>
+                        <div class="card-footer">Created by vs 2019</div>
+                    </div>
+                </div>
+                    </div>
+                        </div>                
+                
+                </div>
+              
+        
+
+
+
+
+      
