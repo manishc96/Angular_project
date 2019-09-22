@@ -1,0 +1,103 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-8">
+            <h2 style="text-align: center">Registration</h2>
+            <br>
+            <h2 class="alert alert-danger" *ngIf="ValidatorsError">{{ValidatorsError}} </h2>
+                <form [formGroup]="Register" (ngSubmit)="Save(Register.value)">
+    
+                    <div class="formGroup" >
+                
+                        <input type="text"class="form-control" placeholder="enter your FirstName"
+                        formControlName="FirstName"
+                        [class.is-valid]="Register.controls.FirstName.valid"
+                        [class.is-invalid]="!Register.controls.FirstName.valid  && submitted" autofocus> 
+                        <div class="valid-feedback">
+                            Looks good :)!
+                          </div>
+                          <div class="invalid-feedback">
+                            FirstName Required!!!
+                          </div><br></div>
+                          <div class="formGroup" >      
+               <input type="text" class="form-control" placeholder="enter You LastName"
+                formControlName="LastName" 
+                [class.is-valid]="Register.controls.LastName.valid"
+                [class.is-invalid]="!Register.controls.LastName.valid &&  submitted"
+                autofocus> <div class="valid-feedback">
+                    Looks good :)!
+                  </div>
+                  <div class="invalid-feedback">
+                    LastName Required!!!
+                  </div><br>
+                  </div>
+                  <div class="formGroup" >
+                <input type="number" class="form-control" placeholder="enter You MobileNo"
+                formControlName="MobileNo" 
+                [class.is-valid]="Register.controls.MobileNo.valid"
+                [class.is-invalid]="!Register.controls.MobileNo.valid &&  submitted"
+                autofocus> <div class="valid-feedback">
+                    Looks good :)!
+                  </div>
+                  <div class="invalid-feedback">
+                    Mobile Number is Required!!!
+                  </div><br>
+                  </div>
+                  <div class="formGroup" >
+                
+                <input type="email" class="form-control" placeholder="enter You Email"
+                formControlName="EmailId" 
+                [class.is-valid]="Register.controls.EmailId.valid"
+                [class.is-invalid]="!Register.controls.EmailId.valid  && submitted"
+                autofocus> <div class="valid-feedback">
+                    Looks good :)!
+                  </div>
+                  <div class="invalid-feedback">
+                    EmailId is Required!!!
+                  </div><br>
+                  </div>
+                  <div class="formGroup" >
+                <input type="text" class="form-control" placeholder="enter You Address"
+                formControlName="Address" 
+                [class.is-valid]="Register.controls.Address.valid"
+                [class.is-invalid]="!Register.controls.Address.valid && submitted"
+                autofocus> <div class="valid-feedback">
+                    Looks good :)!
+                  </div>
+                  <div class="invalid-feedback">
+                    Address is Required!!!
+                  </div><br></div>
+                <div class="formGroup" formGroupName="UserLogin" >
+                
+    
+                <input type="text" class="form-control" placeholder="enter You Username"
+                formControlName="UserName" 
+                [class.is-valid]="Register.controls.UserLogin.controls.UserName.valid"
+                [class.is-invalid]="!Register.controls.UserLogin.controls.UserName.valid  && submitted"
+                autofocus> 
+                <div class="valid-feedback">
+                    Looks good :)!
+                  </div>
+                  <div class="invalid-feedback">
+                    UserName is Required!!!
+                  </div><br>
+                </div>
+                <div class="formGroup" formGroupName="UserLogin" >
+                
+                <input type="password" class="form-control" placeholder="enter You password"
+                formControlName="Password" 
+                [class.is-valid]="Register.controls.UserLogin.controls.Password.valid"
+                [class.is-invalid]="!Register.controls.UserLogin.controls.Password.valid  &&submitted"
+               autofocus > <div class="valid-feedback">
+                Looks good :)!
+              </div>
+              <div class="invalid-feedback">
+                make a password :(
+              </div><br>
+                </div>
+                    <button type="submit" class="btn btn-primary btn-md"
+                    align center >Submit</button>
+                </form>
+        </div>
+    </div>
+    </div>
+    

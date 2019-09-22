@@ -1,4 +1,4 @@
-import { Component, OnInit,ElementRef,Input } from '@angular/core';
+import { Component, OnInit,ElementRef,Input,EventEmitter,Output } from '@angular/core';
 import {userService} from '../../shared/model/services/user.services';
 import {IproductData} from '../../shared/model/productdata';
 import{} from '../../pipes/product-filter.pipe';

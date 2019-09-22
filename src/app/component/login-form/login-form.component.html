@@ -1,0 +1,46 @@
+<div class="container">
+    <div class="row">
+    <div class="col-md-8">
+        <h2 class="alert alert-danger" *ngIf="ValidateError">{{ValidateError}} </h2>
+        <h2 style="text-align: center">Login</h2>
+    <form [formGroup]="Login" (ngSubmit)="Save(Login.value)">
+        <div class="formGroup" formGroupName="UserLogin">
+    
+            <input type="text"class="form-control" placeholder="enter your userName"
+            formControlName="UserName"
+            [class.is-valid]="Login.controls.UserLogin.controls.UserName.valid"
+            [class.is-invalid]="!Login.controls.UserLogin.controls.UserName.valid && submitted">
+            <div class="valid-feedback">
+                Looks good :)!
+              </div>
+              <div class="invalid-feedback">
+                UserName Required!!!
+              </div>
+        </div>
+       
+        <br>
+        <div class="form-group" formGroupName="UserLogin">
+    <input type="password" class="form-control" placeholder="enter password"
+    formControlName="Password" 
+    [class.is-valid]="Login.controls.UserLogin.controls.Password.valid"
+    [class.is-invalid]="!Login.controls.UserLogin.controls.Password.valid && submitted"
+    >
+    <div class="valid-feedback">
+        Looks good :)!
+      </div>
+      <div class="invalid-feedback">
+        Password Required!!!
+      </div>
+        </div>
+      
+        <button type="submit" class="btn btn-primary btn-md"
+        >Submit</button>
+    </form>
+    
+    
+    </div>
+    
+    
+    </div>
+    
+    </div>

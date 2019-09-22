@@ -34,12 +34,12 @@
                                                     <td>{{data.code}}</td>
                                                     <td>{{data.available}}</td>
                                                     <td>{{data.price}}</td>
-                                                <td [title]="data.rating">
-<i class="fa fa-star"></i>
-<i class="fa fa-star"></i>
-<i class="fa fa-star"></i>
-<i class="fa fa-star"></i>
-<i class="fa fa-star"></i>
+                                                <td [title]="data.rating" (click)="Action()">
+<i class="fa fa-star" aria-hidden="true"></i>
+<i class="fa fa-star"aria-hidden="true"></i>
+<i class="fa fa-star"aria-hidden="true"></i>
+<i class="fa fa-star"aria-hidden="true"></i>
+<i class="fa fa-star"aria-hidden="true"></i>
 
                                                 </td>
                                                 </tr>
